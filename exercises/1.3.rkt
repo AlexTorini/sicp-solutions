@@ -8,8 +8,9 @@
   (+ (square x) (square y)))
 
 (define (sum-of-squares-max-two-of-three a b c)
-  (cond ((< a b) (if (< a c) (sum-of-squares b c) (sum-of-squares b a)))
-        (else (if (< b c) (sum-of-squares a c) (sum-of-squares a b)))))
+  (cond ((and (< a b) (< a c)) (sum-of-squares b c))
+        ((and (< a b) (< c a)) (sum-of-squares a b))
+        (else (sum-of-squares a c))))
 
 (check-equal? (sum-of-squares-max-two-of-three 1 2 3) 13)
 (check-equal? (sum-of-squares-max-two-of-three -100 -1 0) 1)
