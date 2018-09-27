@@ -17,3 +17,4 @@
 (check-equal? (sum-of-squares-max-two-of-three -1000 0 0) 0)
 (check-equal? (sum-of-squares-max-two-of-three -1000 -5.5 100) 10030.25)
 (check-equal? (sum-of-squares-max-two-of-three 3 3 3) 18)
+(check-equal? (sum-of-squares-max-two-of-three -3000 -2999 -2998) 17982005)
